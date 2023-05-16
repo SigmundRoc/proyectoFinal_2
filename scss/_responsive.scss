@@ -7,7 +7,92 @@
     .sau{
         height: 100vh;
     }
-    .navbar{
-        display:none;
+    .head{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+/*productos responsive-----------------------------*/
+@media (max-width: 768px){
+    .menu{
+        padding: 30px;
+        
+        label{
+            display: initial !important;
+        }
+
+        .navbar{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #323337;
+            display: none;
+            ul{
+                li{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    /*alt+126 para el signo ~*/
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    /*header--------------------*/
+    .header{
+        min-height: 0vh;
+        .header-content{
+            padding: 100px 30px;
+            p{
+                padding: 0;
+            }
+        }
+        .food{
+            padding: 30px;
+            .food_content{
+                padding: 0;
+                .txt-p{
+                    padding: 0;
+                }
+                .food_group{
+                    flex-direction: column;
+                    margin-bottom: 0;
+
+                }
+            }
+        }
+    }
+
+    .services{
+        padding: 30px;
+        .services_content{
+            p{
+                padding: 0;
+            }
+            .services_group{
+                flex-direction: column;
+                margin-bottom: 0;
+                .services-1{
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+
+    .general{
+        flex-direction: column;
+        .general-1{
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+        }
+        .general-2{
+            .general-3{
+                display: none;
+            }
+        }
     }
 }
